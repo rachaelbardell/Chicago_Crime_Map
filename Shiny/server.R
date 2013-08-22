@@ -7,13 +7,15 @@ violent <- c("ASSAULT", "BATTERY", "CRIM SEXUAL ASSAULT", "KIDNAPPING", "SEX OFF
 crimes <-  table(data$primary.description) # 31 crimes
 crimes <- crimes[crimes > 100] # only 25 with over 100 observations
 
-# dowload previous year's data at: https://data.cityofchicago.org/Public-Safety/Crimes-One-year-prior-to-present/x2n5-8w5q
+# download previous year's data at: https://data.cityofchicago.org/Public-Safety/Crimes-One-year-prior-to-present/x2n5-8w5q
 # x2n5-8w5q is crimes in past year
 # last_year <- read.csv("http://data.cityofchicago.org/views/x2n5-8w5q/rows.csv", stringsAsFactors = F)
      
-# dowload all the data at: https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2
+# download all the data at: https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2
 # ijzp-q8t2 is crimes from 2001 to the present
 # all <- read.csv("http://data.cityofchicago.org/views/ijzp-q8t2/rows.csv", stringsAsFactors = F)}
+
+# should be faster if data is read in manually once, rather than the app downloading it every time...
 
 shinyServer(function(input, output) {
   
